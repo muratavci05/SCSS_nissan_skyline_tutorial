@@ -1,0 +1,186 @@
+@import "variables";
+@import "modules";
+
+@mixin mobile {
+    @media (max-width:800px){
+        @content;
+    }
+}
+
+@mixin laptop {
+   @media (min-width:801px) and (max-width:1400px){
+       @content
+   }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $bg-color;
+    font-family: $main-font;
+    overflow-x: hidden;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    align-items: center;
+    padding: 20px 40px;
+    nav{
+        a{
+            text-decoration: none;
+            white-space: nowrap;
+            color: $text-color;
+            cursor: pointer;
+            &:hover{
+                color: crimson;
+                transition: all 0.5s;
+            }
+        }
+    }
+    #nav-left{
+        display: flex;
+        align-items: center;
+        a{
+            padding:0 20px;
+            border-right: 1px solid;
+        }
+        img{
+            width: 80px;
+        }
+    }
+    #nav-right{
+        display: flex;
+        gap: 20px;
+    }
+}
+
+.hero{
+display: flex;
+background: linear-gradient(rgb(215,215,215) 40%, $bg-color 40%);
+justify-content: space-between;
+padding: 50px;
+@include mobile{
+    flex-direction: column;
+}
+@include laptop{
+    flex-direction: column;
+}
+}
+
+.slogan{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    h1{
+        @extend %heading;
+
+    }
+    p{
+        font-size: 19px;
+        max-width: 500px;
+        text-align: center;
+
+    }
+    img{
+        max-width: 600px;
+        mix-blend-mode: darken;
+        @include mobile{
+            width: 200px;
+        }
+    }
+    h2{
+        @extend %heading;
+    }
+    button{
+        @extend %button;
+        background-color: crimson;
+    }
+
+}
+
+//HERO SAĞ TARAF
+.images{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    &-main{
+        max-width: 900px;
+        @include mobile{
+            width: 500px;
+        }
+    }
+    &-second{
+        max-width: 400px;
+        mix-blend-mode: darken;
+    }
+    p{
+        max-width: 500px;
+        text-align: center;
+    }
+}
+
+// İÇ DİZAYN
+#interior{
+    @extend %design;
+    background-image: radial-gradient( rgba(0, 0, 0, 0.5),black ) ,url(/images/interior.jpg);
+}
+
+// DIŞ DİZAYN
+#exterior{
+    @extend %design;
+    background-image:radial-gradient(rgba(0, 0, 0, 0.5) 40%,black) ,url(/images/exterior-4.jpg);
+}
+
+//arabalar
+
+#cars-sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0;
+
+    button{
+        @extend %button;
+        background-color: aqua;
+        margin-top: 50px;
+    }
+    .cars{
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        @include mobile{
+            flex-direction: column;
+            align-items: center;
+        }
+        img{
+            width: 300px;
+            mix-blend-mode: darken;
+        }
+        .car{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+}
+
+// FOOTER
+footer{
+    display: flex;
+    padding: 40px;
+    background-color: $text-color;
+    color: $bg-color;
+    gap: 40px;
+    img{
+        width: 200px;
+    }
+}

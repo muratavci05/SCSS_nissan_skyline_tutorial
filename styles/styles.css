@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.slogan h2, .slogan h1, #exterior h1, #interior h1 {
+  font-family: "Inter";
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+#cars-sec button, .slogan button, #exterior button, #interior button {
+  padding: 10px 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#exterior, #interior {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  justify-content: center;
+}
+#exterior h1, #interior h1 {
+  font-size: 30px;
+}
+#exterior p, #interior p {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  max-width: 500px;
+}
+#exterior button, #interior button {
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  transition: all 0.5s;
+}
+#exterior button:hover, #interior button:hover {
+  background-color: white;
+  color: black;
+  transition: all 1s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eaeaea;
+  font-family: "Poppins";
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  padding: 20px 40px;
+}
+header nav a {
+  text-decoration: none;
+  white-space: nowrap;
+  color: #252a34;
+  cursor: pointer;
+}
+header nav a:hover {
+  color: crimson;
+  transition: all 0.5s;
+}
+header #nav-left {
+  display: flex;
+  align-items: center;
+}
+header #nav-left a {
+  padding: 0 20px;
+  border-right: 1px solid;
+}
+header #nav-left img {
+  width: 80px;
+}
+header #nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.hero {
+  display: flex;
+  background: linear-gradient(rgb(215, 215, 215) 40%, #eaeaea 40%);
+  justify-content: space-between;
+  padding: 50px;
+}
+@media (max-width: 800px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+@media (min-width: 801px) and (max-width: 1400px) {
+  .hero {
+    flex-direction: column;
+  }
+}
+
+.slogan {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+.slogan p {
+  font-size: 19px;
+  max-width: 500px;
+  text-align: center;
+}
+.slogan img {
+  max-width: 600px;
+  mix-blend-mode: darken;
+}
+@media (max-width: 800px) {
+  .slogan img {
+    width: 200px;
+  }
+}
+.slogan button {
+  background-color: crimson;
+}
+
+.images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.images-main {
+  max-width: 900px;
+}
+@media (max-width: 800px) {
+  .images-main {
+    width: 500px;
+  }
+}
+.images-second {
+  max-width: 400px;
+  mix-blend-mode: darken;
+}
+.images p {
+  max-width: 500px;
+  text-align: center;
+}
+
+#interior {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5), black), url(/images/interior.jpg);
+}
+
+#exterior {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.5) 40%, black), url(/images/exterior-4.jpg);
+}
+
+#cars-sec {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+#cars-sec button {
+  background-color: aqua;
+  margin-top: 50px;
+}
+#cars-sec .cars {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+@media (max-width: 800px) {
+  #cars-sec .cars {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+#cars-sec .cars img {
+  width: 300px;
+  mix-blend-mode: darken;
+}
+#cars-sec .cars .car {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+footer {
+  display: flex;
+  padding: 40px;
+  background-color: #252a34;
+  color: #eaeaea;
+  gap: 40px;
+}
+footer img {
+  width: 200px;
+}/*# sourceMappingURL=styles.css.map */
